@@ -33,10 +33,11 @@ namespace Streja_Raluca_Lab2.Pages.Books
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            /*  if (!ModelState.IsValid)
+               {
+                   return Page();
+               }
+           */
 
             _context.Book.Add(Book);
             await _context.SaveChangesAsync();
