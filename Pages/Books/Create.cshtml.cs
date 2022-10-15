@@ -21,8 +21,7 @@ namespace Streja_Raluca_Lab2.Pages.Books
 
         public IActionResult OnGet()
         {
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
-"PublisherName");
+            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
             return Page();
         }
 
@@ -33,11 +32,11 @@ namespace Streja_Raluca_Lab2.Pages.Books
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid)
+        /*  if (!ModelState.IsValid)
             {
                 return Page();
             }
-
+        */
             _context.Book.Add(Book);
             await _context.SaveChangesAsync();
 
