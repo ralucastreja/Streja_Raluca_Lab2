@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Policy;
 
 namespace Streja_Raluca_Lab2.Models
 {
@@ -15,6 +14,7 @@ namespace Streja_Raluca_Lab2.Models
         [Column(TypeName = "decimal(6,2)")]
         public decimal Price { get; set; }
 
+        [Display(Name = "Publishing Date")]
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
         public int PublisherID { get; set; }
